@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteCraft | Crave Hard. Eat Fast.</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+        /* --- Custom Properties (Colors & Theme) --- */
+        :root {
+            --primary: #FF3E1E;      /* Spicy Red */
+            --secondary: #FFB300;    /* Mustard Yellow */
+            --dark: #111111;         /* Charcoal Black */
+            --light: #F9F9F9;        /* Off-White */
+            --gray: #222222;         /* Card Background */
+            --text-muted: #A0A0A0;
+        }
+
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Utilities --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #e03215;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6a100;
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            color: var(--secondary);
+        }
+
+        /* --- Navbar --- */
+        header {
+            background-color: rgba(17, 17, 17, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 180px 0 100px 0;
+            background: linear-gradient(180deg, rgba(255, 62, 30, 0.1) 0%, rgba(17, 17, 17, 1) 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* --- Featured / Craving Section --- */
+        .craving {
+            padding: 80px 0;
+        }
+
+        .craving-card {
+            background-color: var(--gray);
+            border-left: 5px solid var(--primary);
+            padding: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .craving-content h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .craving-content p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .warning-tag {
+            display: inline-block;
+            background: rgba(255, 62, 30, 0.2);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* --- Features Section --- */
+        .features {
+            padding: 80px 0;
+            background-color: #161616;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--dark);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- Custom Box Grid (Table Alternative) --- */
+        .builder {
+            padding: 80px 0;
+        }
+
+        .builder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .builder-column {
+            background-color: var(--gray);
+            border-radius: 8px;
+            padding: 30px;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .builder-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .builder-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .builder-list li::before {
+            content: "⚡";
+            color: var(--secondary);
+        }
+
+        .builder-action {
+            text-align: center;
+        }
+
+        /* --- Testimonials --- */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #161616;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background-color: var(--dark);
+            padding: 30px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .handle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- Newsletter --- */
+        .newsletter {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(0deg, rgba(255, 179, 0, 0.1) 0%, rgba(17, 17, 17, 1) 100%);
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .cta-form {
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        .cta-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 1px solid #444;
+            background-color: var(--dark);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .cta-form input:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #0b0b0b;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid #222;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .nav-menu { display: none; } /* Simplified for code size */
+            .craving-card { flex-direction: column; text-align: center; }
+            .cta-form { flex-direction: column; border-radius: 0; }
+            .cta-form input { border-radius: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Bite<span>Craft</span></a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Menu</a>
+                <a href="#" class="nav-link">Offers</a>
+                <a href="#" class="nav-link">Locations</a>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+            <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Fast Food Meets<br><span class="highlight">Culinary Obsession</span></h1>
+            <p>We don’t just make food fast; we make it legendary. Premium ingredients, bold flavors, delivered at lightning speed.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">Order Delivery</a>
+                <a href="#" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craving Section -->
+    <section class="craving">
+        <div class="container">
+            <h2 class="section-title">⚡ Craving of the week</h2>
+            <div class="craving-card">
+                <div class="craving-content">
+                    <span class="warning-tag">Warning: Not for the faint of heart</span>
+                    <h3>The Ghost Pepper Crunch-Master</h3>
+                    <p>Double smash-patty, fiery ghost pepper jack, crispy onion strings, and our signature <em>Hellfire Sauce</em> on a toasted brioche bun. Your tastebuds aren't ready.</p>
+                    <a href="#" class="btn btn-primary">🔥 Snag It Before It's Gone</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why BiteCraft <span class="highlight">Hits Different</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🥩</div>
+                    <h3>100% Fresh, Never Frozen</h3>
+                    <p>Our beef is premium, our veggies are crisp, and our chicken is hand-breaded daily. Taste the freshness.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>From the grill to your hands in under 5 minutes, whether you're hitting the drive-thru or ordering to your couch.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h3>The Dip Dynasty</h3>
+                    <p>12 proprietary sauces made entirely from scratch. If you aren't dipping, you aren't doing it right.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Your Box Section -->
+    <section class="builder">
+        <div class="container">
+            <h2 class="section-title">🛠️ Build Your Box</h2>
+            <div class="builder-grid">
+                <div class="builder-column">
+                    <h3>Step 1: Pick Your Main</h3>
+                    <ul class="builder-list">
+                        <li>The Classic Smash</li>
+                        <li>Nashville Hot Chook</li>
+                        <li>The Green Goddess (V)</li>
+                    </ul>
+                </div>
+                <div class="builder-column">
+                    <h3>Step 2: Choose Your Side</h3>
+                    <ul class="builder-list">
+                        <li>Waffle Fries</li>
+                        <li>Loaded Tater Tots</li>
+                        <li>Onion Rings</li>
+                    </ul>
+                </div>
+                <div class="builder-column">
+                    <h3>Step 3: Drown In Sauce</h3>
+                    <ul class="builder-list">
+                        <li>Craft BBQ</li>
+                        <li>Garlic Aioli Mayo</li>
+                        <li>Spicy Mango Habanero</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="builder-action">
+                <a href="#" class="btn btn-secondary">Customize Your Box ➡️</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Trending on <span class="highlight">Insta</span></h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The cheese pull on the mozzarella sticks is actually biblical."</p>
+                    <span class="handle">@FoodieFrank</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I would seriously bathe in the Garlic Aioli. No cap."</p>
+                    <span class="handle">@SarahEatsWorld</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Fast food that actually looks identical to the commercial. 10/10."</p>
+                    <span class="handle">@Ben_Devours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get 20% Off Your First Order!</h2>
+            <p>Join the <strong>BiteCraft Cult</strong> newsletter. No spam, just exclusive secret menu drops and heavy discounts.</p>
+            <form class="cta-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Join The Cult</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BiteCraft Fast Food Inc.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
