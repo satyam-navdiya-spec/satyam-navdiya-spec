@@ -1,0 +1,83 @@
+<svg fill="none" viewBox="0 0 650 450" width="650" height="450" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal-container {
+          background-color: #000000;
+          font-family: 'Courier New', Courier, monospace;
+          color: #ffffff;
+          padding: 15px;
+          font-size: 13px;
+          line-height: 1.6;
+          height: 420px;
+          box-sizing: border-box;
+        }
+        .orange { color: #E28743; font-weight: bold; }
+        .cyan { color: #4AA9A4; font-weight: bold; }
+        
+        /* Animation Core */
+        .animated-text {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 0;
+          animation: type-line 0.3s steps(50, end) forwards;
+        }
+        @keyframes type-line {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+        
+        /* Precise Sequence Delays */
+        .line-1  { animation-delay: 0.1s; }
+        .line-2  { animation-delay: 0.3s; }
+        .line-3  { animation-delay: 0.5s; }
+        .line-4  { animation-delay: 0.7s; }
+        .line-5  { animation-delay: 0.9s; }
+        .line-6  { animation-delay: 1.1s; }
+        .line-7  { animation-delay: 1.3s; }
+        .line-8  { animation-delay: 1.5s; }
+        .line-9  { animation-delay: 1.7s; }
+        .line-10 { animation-delay: 1.9s; }
+        .line-11 { animation-delay: 2.1s; }
+        .line-12 { animation-delay: 2.3s; }
+        .line-13 { animation-delay: 2.4s; }
+        .line-14 { animation-delay: 2.5s; }
+        .line-15 { animation-delay: 2.6s; }
+        .line-16 { animation-delay: 2.7s; }
+        .line-17 { animation-delay: 2.8s; }
+        .line-18 { animation-delay: 2.9s; }
+        .line-19 { animation-delay: 3.0s; }
+        .line-20 { animation-delay: 3.2s; }
+        .line-21 { animation-delay: 3.4s; }
+        .line-22 { animation-delay: 3.6s; }
+        .line-23 { animation-delay: 3.8s; }
+      </style>
+
+      <div class="terminal-container">
+        <div class="animated-text line-1"><span class="orange">Name</span> ................... : <span class="cyan">Indrajith V S</span></div>
+        <div class="animated-text line-2"><span class="orange">Role</span> ................... : ERPNext &amp; Frappe Developer</div>
+        <div class="animated-text line-3"><span class="orange">Experience</span> ............. : 3+ Years</div>
+        <div class="animated-text line-4"><span class="orange">Location</span> ............... : Kerala, India</div>
+        <div class="animated-text line-5">-------------------------------------------------------------</div>
+        <div class="animated-text line-6"><span class="orange">Tech Stack</span></div>
+        <div class="animated-text line-7"><span class="orange">Languages</span> .............. : Python, JavaScript, SQL, HTML, CSS</div>
+        <div class="animated-text line-8"><span class="orange">Frameworks</span> ............. : Frappe Framework, ERPNext, Frappe UI, Vue.js, Django</div>
+        <div class="animated-text line-9"><span class="orange">Databases</span> .............. : MariaDB, MySQL, MongoDB</div>
+        <div class="animated-text line-10">-------------------------------------------------------------</div>
+        <div class="animated-text line-11"><span class="orange">Expertise</span> &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; ERPNext Implementation &amp; Customization</div>
+        <div class="animated-text line-12">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Custom App Development</div>
+        <div class="animated-text line-13">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Frappe UI App Development</div>
+        <div class="animated-text line-14">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; REST API Development &amp; Integrations</div>
+        <div class="animated-text line-15">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Workflow Automation</div>
+        <div class="animated-text line-16">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; HRMS, CRM &amp; Business Process Automation</div>
+        <div class="animated-text line-17">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Print Formats &amp; Reports</div>
+        <div class="animated-text line-18">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Performance Optimization</div>
+        <div class="animated-text line-19">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;bull; Server Deployment &amp; Maintenance</div>
+        <div class="animated-text line-20">-------------------------------------------------------------</div>
+        <div class="animated-text line-21"><span class="orange">Contact</span> &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Website ............ : https://indrajithvs.me</div>
+        <div class="animated-text line-22">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;LinkedIn ........... : https://linkedin.com/in/indrajith-vs</div>
+        <div class="animated-text line-23">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Email .............. : indrajith.vs2016@gmail.com</div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
